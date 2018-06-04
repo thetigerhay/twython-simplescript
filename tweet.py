@@ -5,6 +5,8 @@ import sys
 # Define the text to tweet by reading out command arguments
 tweet = ' '.join(sys.argv[1:])
 str = str(tweet)
+str = str.replace('hashtag_', '#')
+str = str.replace('at_', '@')
 
 # Accessing the Twitter-API
 apiKey = 'YOUR_API_KEY'
